@@ -160,8 +160,6 @@ locals {
   })
 }
 
-
-
 #resource "null_resource" "patch" {
 #  triggers = {
 #    kubeconfig = base64encode(local.kubeconfig)
