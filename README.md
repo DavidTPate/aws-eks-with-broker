@@ -21,7 +21,7 @@ To setup this infrastructure in your AWS account execute the following steps:
 10. Follow pre-requisite steps [here](https://github.com/awslabs/aws-servicebroker/blob/main/docs/install_prereqs.md).
 11. Now we need to go to the Flux directory via the command `cd ../terraform-eks-flux/`.
 12. Run `terraform apply` to initialize the Flux repository and setup Flux on the cluster which will.
-13. At this point we want to unzip the additional YAML files into the `dev-elk/flux-system` directory created in the previous step and then commit and push those. Then Flux will automatically sync to that repository and should start setting up AWS Service Broker, ElasticSearch, Kibana, and then finally the AWS S3 Bucket and SQS Queues specified in the YAMLs.
+13. At this point we want to grab the additional YAML files from the [Flux Repository](https://github.com/DavidTPate/dp-flux/tree/main/dev-elk/flux-system) into the `dev-elk/flux-system` directory created in the previous step and then commit and push those. Then Flux will automatically sync to that repository and should start setting up AWS Service Broker, ElasticSearch, Kibana, and then finally the AWS S3 Bucket and SQS Queues specified in the YAMLs.
 
 ## Validation
 At the end of executing the above steps you should have an EKS cluster with ELK deployed in it, AWS Service Broker, and Flux which are provisioning Kubernetes objects and also AWS Objects.
